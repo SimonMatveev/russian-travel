@@ -1,0 +1,23 @@
+.footer {
+  padding: 92px 48px 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 88px 24px 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /* Если менять на 425px, слишком много контента переносится на вторую строку */
+  .footer {
+    flex-direction: column;
+    padding: 64px 16px 24px;
+    gap: 48px;
+  }
+}

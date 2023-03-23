@@ -1,254 +1,43 @@
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("./vendor/fonts/Inter-Regular.ttf") format("truetype"),
-    url("./vendor/fonts/Inter-Regular.woff2") format("woff2"),
-    url("./vendor/fonts/Inter-Regular.woff") format("woff");
-}
 
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("./vendor/fonts/Inter-Bold.ttf") format("truetype"),
-    url("./vendor/fonts/Inter-Bold.woff2") format("woff2"),
-    url("./vendor/fonts/Inter-Bold.woff") format("woff");
-}
 
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("./vendor/fonts/Inter-Black.ttf") format("truetype"),
-    url("./vendor/fonts/Inter-Black.woff2") format("woff2"),
-    url("./vendor/fonts/Inter-Black.woff") format("woff");
-}
 
-.body {
-  margin: 0;
-  background-color: #2A2C2F;
-  color: white;
-  font-family: 'Inter', sans-serif;
-}
 
-.container {
-  margin: 0 auto;
-}
 
-.container_width_big {
-  max-width: 1148px;
-}
 
-.container_width_small {
-  max-width: 1005px;
-}
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 16px 48px 0;
-}
 
-@media screen and (max-width: 768px) {
-  .header {
-    padding-left: 24px;
-    padding-right: 24px;
-    width: calc(100%-48px);
-  }
-}
 
-@media screen and (max-width: 425px) {
-  .header {
-    padding-left: 16px;
-    padding-right: 16px;
-    width: calc(100%-32px);
-  }
-}
 
-.header__logo {
-  width: 176px;
-  object-fit: contain;
-}
 
-@media screen and (max-width: 425px) {
-  .header__logo {
-    width: 142px;
-  }
-}
 
-.header__lang-switch {
-  margin: 0;
-  padding: 0 0 6px;
-  list-style: none;
-  display: flex;
-  gap: 18px;
-}
 
-.header__lang-link {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.17;
-  text-decoration: none;
-  color: white;
-  transition: opacity .2s;
-}
 
-@media screen and (max-width: 425px) {
-  .header__lang-link {
-    font-size: 18px;
-    line-height: 1.1;
-  }
-}
 
-.header__lang-link_active {
-  text-decoration: underline;
-}
 
-.header__lang-link:hover {
-  opacity: .8;
-}
 
-.lead {
-  padding-top: 56px;
-  padding-left: 48px;
-  padding-right: 48px;
-}
 
-@media screen and (max-width: 1024px) {
-  .lead {
-    padding-top: 48px;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .lead {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
 
-.lead__title {
-  margin: 0 auto 32px;
-  max-width: 720px;
-  font-weight: 900;
-  font-size: 96px;
-  line-height: 1.04;
-  text-align: center;
-}
 
-@media screen and (max-width: 767px) {
-  /* Взял отличающуюся от остальных медиазапросов ширину 767 для соответствия макету, так как на этой ширине уже нужно уменьшать размер шрифта, а делать единственную секцию через min-width посчитал менее рациональным */
-  .lead__title {
-    font-size: 40px;
-    line-height: 1.1;
-    max-width: 90%;
-  }
-}
 
-@media screen and (max-width: 425px) {
-  .lead__title {
-    margin: 0 auto 16px;
-  }
-}
 
-.lead__subtitle {
-  margin: 0 auto 64px;
-  max-width: 640px;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 1.2;
-  text-align: center;
-}
 
-@media screen and (max-width: 1024px) {
-  .lead__subtitle {
-    margin: 0 auto 56px;
-  }
-}
 
-@media screen and (max-width: 767px) {
-  .lead__subtitle {
-    font-size: 16px;
-    line-height: 1.25;
-    max-width: 90%;
-  }
-}
 
-@media screen and (max-width: 425px) {
-  .lead__subtitle {
-    margin: 0 auto 40px;
-  }
-}
 
-.lead__image-container {
-  margin: 0;
-}
 
-.lead__image {
-  width: 100%;
-  margin-bottom: 8px;
-}
 
-.lead__image-caption {
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 1.4;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
 
-@media screen and (max-width: 768px) {
-  .lead__image-caption {
-    padding-left: 24px;
-  }
-}
 
-@media screen and (max-width: 425px) {
-  .lead__image-caption {
-    padding-left: 16px;
-  }
-}
 
-.intro {
-  padding-top: 92px;
-  padding-left: 48px;
-  padding-right: 48px;
-}
 
-@media screen and (max-width: 768px) {
-  .intro {
-    padding-top: 88px;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
 
-@media screen and (max-width: 425px) {
-  .intro {
-    padding-top: 64px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
 
-.intro__title {
-  margin: 0 0 40px;
-  font-weight: 900;
-  font-size: 54px;
-  line-height: 1.07;
-}
 
-@media screen and (max-width: 425px) {
-  .intro__title {
-    font-size: 32px;
-    line-height: 1.09;
-  }
-}
+
+
+
+
 
 .intro__text {
   margin: 0;
@@ -263,7 +52,6 @@
   .intro__text {
     max-width: 100%;
   }
-
 }
 
 .intro__list {
@@ -299,6 +87,7 @@
 @media screen and (max-width: 425px) {
   .photo-grid {
     padding: 64px 16px;
+    gap: 12px;
   }
 }
 
@@ -381,10 +170,10 @@
   font-weight: 900;
   font-size: 72px;
   line-height: 1.06;
-  width: 47%;
+  width: 46.8%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .places__title {
     font-size: 42px;
     line-height: 1.1;
@@ -453,7 +242,7 @@
 }
 
 .places__image {
-  width: 47%;
+  width: 46.8%;
   object-fit: contain;
 }
 
@@ -539,6 +328,7 @@
     font-size: 32px;
     line-height: 1.09;
     max-width: 75%;
+    margin-bottom: 16px;
   }
 }
 
@@ -580,9 +370,11 @@
 }
 
 @media screen and (max-width: 550px) {
+
   /* Если менять на 425px, слишком много контента переносится на вторую строку */
   .footer {
     flex-direction: column;
+    padding: 64px 16px 24px;
     gap: 48px;
   }
 }
