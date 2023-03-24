@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 1024px) {
   .lead__subtitle {
-    margin: 0 auto 56px;
+    margin-bottom: 56px;
   }
 }
 
@@ -23,6 +23,6 @@
 
 @media screen and (max-width: 425px) {
   .lead__subtitle {
-    margin: 0 auto 40px;
+    margin-bottom: 40px;
   }
 }
