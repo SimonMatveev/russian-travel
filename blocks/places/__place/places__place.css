@@ -1,15 +1,33 @@
-.places__place:not(:last-of-type) {
+.places__place {
+  display: grid;
+  grid-template-columns: 46.8% auto;
+  column-gap: 40px;
+  row-gap: 48px;
   margin-bottom: 80px;
 }
 
+.places__place:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .places__place {
+    grid-template-columns: 47.4% auto;
+    column-gap: 28px;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .places__place:not(:last-of-type) {
-    margin-bottom: 72px;
+  .places__place {
+    column-gap: 28px;
+    margin-bottom: 73px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .places__place:not(:last-of-type) {
+  .places__place {
+    grid-template-columns: 1fr;
     margin-bottom: 50px;
+    gap: 32px;
   }
 }

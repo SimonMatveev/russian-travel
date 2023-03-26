@@ -3,7 +3,6 @@
   font-weight: 900;
   font-size: 72px;
   line-height: 1.06;
-  width: 46.8%;
 }
 
 @media screen and (max-width: 1023px) {
@@ -15,8 +14,16 @@
 
 @media screen and (max-width: 600px) {
   .places__title {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .places__title {
+    padding-left: 16px;
+    padding-right: 16px;
     font-size: 32px;
     line-height: 1.09;
-    width: 100%;
   }
 }
